@@ -18,6 +18,7 @@ Intern::Intern(const Intern &cpy)
 Intern &Intern::operator=(const Intern &cpy)
 {
 	(void)cpy;
+	return *this;
 }
 
 Intern::~Intern()
@@ -28,7 +29,7 @@ Intern::~Intern()
 AForm *Intern::makeForm(const std::string &name, const std::string &target) const
 {
 
-	std::string forms_name[4] = {"presidentialpardon", "robotomyrequest", "shruberrycreation", NULL};
+	std::string forms_name[3] = {"presidentialpardon", "robotomyrequest", "shruberrycreation"};
 	int i;
 
 	for (i = 0; i < 3 ; i++)
@@ -42,8 +43,7 @@ AForm *Intern::makeForm(const std::string &name, const std::string &target) cons
 		case 2:
 			return new ShrubberyCreationForm(target);
 		default:
-			std::cout << "Forn not exists" << std::endl;
+			std::cout << "Form not exists" << std::endl;
 			return NULL;
 	}
-	return NULL;
 }
