@@ -32,10 +32,10 @@ class Form
 		void beSigned(const Bureaucrat &bureaucrat);
 
 	private:
-		const std::string name;
+		std::string const name;
 		bool sign;
-		int reqSign;
-		int reqExec;
+		int const reqSign;
+		int const reqExec;
 };
 
 std::ostream &operator<<(std::ostream &os, const Form &obj);

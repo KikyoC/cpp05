@@ -1,29 +1,30 @@
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
-Form::Form (const std::string name, const int reqSign, const int reqExec): name(name), sign(false)
+Form::Form (const std::string name, const int reqSign, const int reqExec):
+	name(name),
+	sign(false),
+	reqExec(reqExec),
+	reqSign(reqSign)
 {
 	if (reqSign > 150 || reqExec > 150)
 		throw GradeTooLowException();
 	if (reqSign < 1 || reqExec < 1)
 		throw GradeTooHighException();
-	this->reqExec = reqExec;
-	this->reqSign = reqSign;
 }
 
-Form::Form (const Form &cpy): name(cpy.name)
+Form::Form (const Form &cpy):
+	name(cpy.name),
+	reqExec(cpy.reqExec),
+	reqSign(cpy.reqSign),
+	sign(false)
 {
-	this->reqExec = cpy.reqExec;
-	this->reqSign = cpy.reqSign;
-	this->sign = false;
 }
 
 Form &Form::operator=(const Form &cpy)
 {
 	if (this != &cpy)
 	{
-		this->reqExec = cpy.reqExec;
-		this->reqSign = cpy.reqSign;
 		this->sign = false;
 	}
 	return *this;
