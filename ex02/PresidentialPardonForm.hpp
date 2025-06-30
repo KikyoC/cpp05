@@ -18,9 +18,10 @@ class PresidentialPardonForm: public AForm
 		int getSignRequirement() const;
 		int getExecuteRequirement() const;
 
-		void execute(const Bureaucrat &bureaucrat) const;
+		// void execute(const Bureaucrat &bureaucrat) const;
 
 	private:
 		const std::string &target;
+		virtual void performAction() const;
 };
 

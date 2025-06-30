@@ -44,12 +44,8 @@ bool ShrubberyCreationForm::isSigned() const
 	return AForm::isSigned();
 }
 
-void ShrubberyCreationForm::execute(const Bureaucrat &bureaucrat) const
+void ShrubberyCreationForm::performAction() const
 {
-	if (!this->isSigned())
-		throw FormNotSignedException();
-	if (bureaucrat.getGrade() > this->getExecuteRequirement())
-		throw GradeTooLowException();
 	std::string str = this->target + "_shrubbery";
 	std::ofstream file(str.c_str());
 
