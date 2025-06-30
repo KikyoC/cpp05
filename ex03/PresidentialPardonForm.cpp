@@ -44,12 +44,8 @@ bool PresidentialPardonForm::isSigned() const
 	return AForm::isSigned();
 }
 
-void PresidentialPardonForm::execute(const Bureaucrat &bureaucrat) const
+void PresidentialPardonForm::performAction() const
 {
-	if (!this->isSigned())
-		throw FormNotSignedException();
-	if (bureaucrat.getGrade() < this->getExecuteRequirement())
-		throw GradeTooLowException();
-	std::cout << this->target << " has been pardoned by Zaphod Beeblebrox" << bureaucrat.getName() << std::endl; 
+	std::cout << getName() << " has been pardoned by Zaphod Beeblebrox" << std::endl; 
 }
 

@@ -11,7 +11,7 @@ class AForm
 		AForm (const std::string name, const int reqSign, const int reqExec);
 		AForm (const AForm &cpy);
 		AForm &operator=(const AForm &cpy);
-		~AForm();
+		virtual ~AForm();
 
 		virtual std::string getName() const = 0;
 		virtual bool isSigned() const = 0;
@@ -36,13 +36,14 @@ class AForm
 		};
 
 		virtual void beSigned(const Bureaucrat &bureaucrat);
-		virtual void execute(Bureaucrat const &executor) const = 0;	
+		void execute(Bureaucrat const &executor) const;	
 
 	private:
 		const std::string name;
 		bool sign;
 		int reqSign;
 		int reqExec;
+		virtual void performAction() const = 0;;
 };
 
 std::ostream &operator<<(std::ostream &os, const AForm &obj);

@@ -45,12 +45,8 @@ bool RobotomyRequestForm::isSigned() const
 	return AForm::isSigned();
 }
 
-void RobotomyRequestForm::execute(const Bureaucrat &bureaucrat) const
+void RobotomyRequestForm::performAction() const
 {
-	if (!this->isSigned())
-		throw FormNotSignedException();
-	if (bureaucrat.getGrade() < this->getExecuteRequirement())
-		throw GradeTooLowException();
 	std::srand(time(0));
 	int random = std::rand() % 2;
 	if (random)
