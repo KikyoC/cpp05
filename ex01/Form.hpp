@@ -34,8 +34,8 @@ class Form
 	private:
 		std::string const name;
 		bool sign;
-		int const reqSign;
 		int const reqExec;
+		int const reqSign;
 };
 
 std::ostream &operator<<(std::ostream &os, const Form &obj);
