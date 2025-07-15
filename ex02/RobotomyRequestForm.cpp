@@ -25,26 +25,6 @@ RobotomyRequestForm::~RobotomyRequestForm()
 {
 }
 
-std::string RobotomyRequestForm::getName() const
-{
-	return AForm::getName();
-}
-
-int RobotomyRequestForm::getExecuteRequirement() const
-{
-	return AForm::getExecuteRequirement();
-}
-
-int RobotomyRequestForm::getSignRequirement() const
-{
-	return AForm::getSignRequirement();
-}
-
-bool RobotomyRequestForm::isSigned() const
-{
-	return AForm::isSigned();
-}
-
 void RobotomyRequestForm::performAction() const
 {
 	std::srand(time(0));

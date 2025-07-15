@@ -34,7 +34,7 @@ AForm::~AForm()
 
 }
 
-std::string AForm::getName() const
+const std::string &AForm::getName() const
 {
 	return this->name;
 }
