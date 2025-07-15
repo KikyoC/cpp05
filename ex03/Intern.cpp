@@ -29,21 +29,28 @@ Intern::~Intern()
 AForm *Intern::makeForm(const std::string &name, const std::string &target) const
 {
 
-	std::string forms_name[3] = {"presidentialpardon", "robotomyrequest", "shruberrycreation"};
+	std::string forms_name[4] = {"presidentialpardon", "robotomyrequest", "shruberrycreation", ""};
 	int i;
+	
+	AForm *res;
 
-	for (i = 0; i < 3 ; i++)
+	for (i = 0; !forms_name[i].empty() ; i++)
 		if (name == forms_name[i])
 			break;
 	switch (i) {
 		case 0:
-			return new PresidentialPardonForm(target);
+			res = new PresidentialPardonForm(target);
+			break ;
 		case 1:
-			return new RobotomyRequestForm(target);
+			res = new RobotomyRequestForm(target);
+			break ;
 		case 2:
-			return new ShrubberyCreationForm(target);
+			res = new ShrubberyCreationForm(target);
+			break ;
 		default:
-			std::cout << "Form not exists" << std::endl;
+			std::cout << "Form does not exists" << std::endl;
 			return NULL;
 	}
+	std::cout << "Intern creates " << forms_name[i] << std::endl;
+	return res;
 }
