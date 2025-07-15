@@ -13,10 +13,10 @@ class AForm
 		AForm &operator=(const AForm &cpy);
 		virtual ~AForm();
 
-		virtual std::string getName() const = 0;
-		virtual bool isSigned() const = 0;
-		virtual int getSignRequirement() const = 0;
-		virtual int getExecuteRequirement() const = 0;
+		const std::string &getName() const;
+		bool isSigned() const;
+		int getSignRequirement() const;
+		int getExecuteRequirement() const;
 
 		class GradeTooHighException: public std::exception
 		{

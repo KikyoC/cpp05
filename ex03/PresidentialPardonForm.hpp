@@ -13,13 +13,6 @@ class PresidentialPardonForm: public AForm
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &cpy);
 		~PresidentialPardonForm();
 
-		std::string getName() const;
-		bool isSigned() const;
-		int getSignRequirement() const;
-		int getExecuteRequirement() const;
-
-		// void execute(const Bureaucrat &bureaucrat) const;
-
 	private:
 		const std::string &target;
 		virtual void performAction() const;

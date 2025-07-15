@@ -24,26 +24,6 @@ PresidentialPardonForm::~PresidentialPardonForm()
 {
 }
 
-std::string PresidentialPardonForm::getName() const
-{
-	return AForm::getName();
-}
-
-int PresidentialPardonForm::getExecuteRequirement() const
-{
-	return AForm::getExecuteRequirement();
-}
-
-int PresidentialPardonForm::getSignRequirement() const
-{
-	return AForm::getSignRequirement();
-}
-
-bool PresidentialPardonForm::isSigned() const
-{
-	return AForm::isSigned();
-}
-
 void PresidentialPardonForm::performAction() const
 {
 	std::cout << getName() << " has been pardoned by Zaphod Beeblebrox" << std::endl; 

@@ -13,11 +13,6 @@ class ShrubberyCreationForm: public AForm
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &cpy);
 		~ShrubberyCreationForm();
 
-		std::string getName() const;
-		bool isSigned() const;
-		int getSignRequirement() const;
-		int getExecuteRequirement() const;
-
 	private:
 		const std::string &target;
 		virtual void performAction() const;

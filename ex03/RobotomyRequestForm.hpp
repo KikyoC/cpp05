@@ -13,11 +13,6 @@ class RobotomyRequestForm: public AForm
 		RobotomyRequestForm &operator=(const RobotomyRequestForm &cpy);
 		~RobotomyRequestForm();
 
-		std::string getName() const;
-		bool isSigned() const;
-		int getSignRequirement() const;
-		int getExecuteRequirement() const;
-
 	private:
 		const std::string &target;
 		virtual void performAction() const;

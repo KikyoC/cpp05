@@ -24,26 +24,6 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 
 }
 
-std::string ShrubberyCreationForm::getName() const
-{
-	return AForm::getName();
-}
-
-int ShrubberyCreationForm::getExecuteRequirement() const
-{
-	return AForm::getExecuteRequirement();
-}
-
-int ShrubberyCreationForm::getSignRequirement() const
-{
-	return AForm::getSignRequirement();
-}
-
-bool ShrubberyCreationForm::isSigned() const
-{
-	return AForm::isSigned();
-}
-
 void ShrubberyCreationForm::performAction() const
 {
 	std::string str = this->target + "_shrubbery";
