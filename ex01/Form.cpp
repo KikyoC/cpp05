@@ -15,9 +15,9 @@ Form::Form (const std::string name, const int reqSign, const int reqExec):
 
 Form::Form (const Form &cpy):
 	name(cpy.name),
+	sign(false),
 	reqExec(cpy.reqExec),
-	reqSign(cpy.reqSign),
-	sign(false)
+	reqSign(cpy.reqSign)
 {
 }
 
