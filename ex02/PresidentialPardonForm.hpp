@@ -8,13 +8,14 @@ class Bureaucrat;
 class PresidentialPardonForm: public AForm
 {
 	public:
+		PresidentialPardonForm();
 		PresidentialPardonForm(const std::string &target);
 		PresidentialPardonForm(const PresidentialPardonForm &cpy);
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &cpy);
 		~PresidentialPardonForm();
 
 	private:
-		const std::string &target;
+		const std::string target;
 		virtual void performAction() const;
 };
 

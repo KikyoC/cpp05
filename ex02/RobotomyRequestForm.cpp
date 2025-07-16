@@ -6,6 +6,8 @@
 #include <iostream>
 #include <string>
 
+RobotomyRequestForm::RobotomyRequestForm(): AForm("robotomy", 72, 45), target("random guy") {}
+
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target): AForm("robotomy", 72, 45), target(target)
 {
 }

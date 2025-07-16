@@ -3,6 +3,9 @@
 #include <exception>
 #include <iostream>
 
+
+Bureaucrat::Bureaucrat(): name("Noobie", 150){}
+
 Bureaucrat::Bureaucrat(const std::string name, const int grade): name(name)
 {
 	setGrade(grade);
