@@ -1,11 +1,15 @@
 #include "PresidentialPardonForm.hpp"
 #include <AForm.hpp>
 #include <Bureaucrat.hpp>
-#include <fstream>
 #include <iostream>
 #include <string>
 
-PresidentialPardonForm::PresidentialPardonForm(const std::string &target): AForm(target, 25, 5), target(target)
+PresidentialPardonForm::PresidentialPardonForm():
+	AForm("presidential pardon", 25, 5),
+	target(std::string("random guy"))
+{}
+
+PresidentialPardonForm::PresidentialPardonForm(const std::string &target): AForm("presidential pardon", 25, 5), target(target)
 {
 }
 

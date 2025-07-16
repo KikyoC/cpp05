@@ -7,6 +7,7 @@ class Bureaucrat
 {
 	public:
 
+		Bureaucrat();
 		Bureaucrat(const std::string name, const int grade);
 		Bureaucrat(const Bureaucrat &cpy);
 		Bureaucrat &operator=(const Bureaucrat &cpy);

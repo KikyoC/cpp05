@@ -1,6 +1,8 @@
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
+AForm::AForm(): name("randomform"), reqSign(150), reqExec(150) {}
+
 AForm::AForm (const std::string name, const int reqSign, const int reqExec): name(name), sign(false)
 {
 	if (reqSign > 150 || reqExec > 150)

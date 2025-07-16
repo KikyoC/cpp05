@@ -4,6 +4,8 @@
 #include <fstream>
 #include <string>
 
+ShrubberyCreationForm::ShrubberyCreationForm(): AForm("shruberry", 145, 137), target("random guy"){}
+
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target): AForm("shruberry", 145, 137), target(target)
 {
 }

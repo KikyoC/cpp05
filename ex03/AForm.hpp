@@ -8,6 +8,7 @@ class Bureaucrat;
 class AForm
 {
 	public:
+		AForm();
 		AForm (const std::string name, const int reqSign, const int reqExec);
 		AForm (const AForm &cpy);
 		AForm &operator=(const AForm &cpy);
