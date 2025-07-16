@@ -1,6 +1,13 @@
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
+Form::Form():
+	name("random form"),
+	sign(false),
+	reqExec(150),
+	reqSign(150)
+{}
+
 Form::Form (const std::string name, const int reqSign, const int reqExec):
 	name(name),
 	sign(false),
